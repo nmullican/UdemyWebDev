@@ -39,7 +39,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+nbproject/
 jspm_packages/
+.settings/
 
 # TypeScript v1 declaration files
 typings/
