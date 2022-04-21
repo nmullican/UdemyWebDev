@@ -59,8 +59,27 @@ app.post("/", function(req, res){
   }
 });
 
+app.post("/delete", function(req, res){
+  const checkedID = req.body.checkedbox;
+  console.log(checkedID);
+
+  // delete from item list
+  items.splice(items.indexOf(checkedID), 1);
+
+  // delete from database
+  Item.deleteOne({name: checkedID}).then(function(){
+    console.log(checkedID + " deleted");
+
+    res.redirect("/");
+  })
+});
+
 app.get("/work", function(req,res){
   res.render("list", {listTitle: "Work List", newListItems: workItems});
+});
+
+app.get("/:id", function(req,res){
+  res.render(req.params.id , {listTitle: 'id', newListItems: workItems});
 });
 
 app.get("/about", function(req, res){
@@ -70,16 +89,3 @@ app.get("/about", function(req, res){
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
-
-function deleteItem()
-{
-  var checkBox = document.getElementById("checkedItem");
-  var text = document.getElementById("text");
-
-  if (checkBox.checked == true){
-    console.log("checked it text: " + text);
-  } else {
-    console.log("not checked: " + text);
-  }
-
-}

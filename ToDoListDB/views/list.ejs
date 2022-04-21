@@ -5,11 +5,16 @@
 </div>
 
 <div class="box">
-    <% for (let i=0; i<newListItems.length; i++) { %>
+  <% for (let i=0; i<newListItems.length; i++) { %>
+    <form class="" action="/delete" method="post">
       <div class="item">
-        <input type="checkbox" id="checkedItem">
+        <!--name gives us access to figuring out which box was clicked
+        onChange triggers the post to /delete in app.js
+        assign the item id to the value so we know which items are checked -->
+        <input type="checkbox" name="checkedbox" value="<%=newListItems[i]%>" onchange="this.form.submit()">
         <p><%=  newListItems[i]  %></p>
       </div>
+    </form>
     <% } %>
 
     <form class="item" action="/" method="post">
