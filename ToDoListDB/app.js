@@ -78,8 +78,9 @@ app.get("/work", function(req,res){
   res.render("list", {listTitle: "Work List", newListItems: workItems});
 });
 
-app.get("/:id", function(req,res){
-  res.render(req.params.id , {listTitle: 'id', newListItems: workItems});
+app.get("/:siteName", function(req,res){
+  const siteName = req.params.siteName;
+  
 });
 
 app.get("/about", function(req, res){
