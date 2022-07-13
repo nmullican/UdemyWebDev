@@ -4,13 +4,16 @@ import Footer from "./Footer";
 import Note from "./Note";
 
 import '../styles.css';
+import { notes } from '../notes.js'
 
 function App() {
   return (
     <div>
-      <Header />
-      <Note />
-      <Footer />
+          <Header />
+          {notes.map(note => {
+              return (<Note title={note.title} content={note.content}/>)
+          })}
+          <Footer />
     </div>
   );
 }
