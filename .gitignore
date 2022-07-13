@@ -25,3 +25,7 @@
 /projects/ReactMapping/.vs/ReactMapping/config/applicationhost.config
 /projects/ReactMapping/ReactMapping/.gitignore
 /projects/ReactMapping/ReactMapping.sln
+/projects/ReactLogin/ReactLogin/nuget.config
+/projects/ReactLogin/ReactLogin.sln
+/projects/ReactLogin/ReactLogin/.gitignore
+/projects/ReactLogin/.vs/ReactLogin/config/applicationhost.config
