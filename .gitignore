@@ -2,4 +2,26 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/keeper
+/notes/atlassian-git-cheatsheet.pdf
+/projects/ToDoListNoDB
+/projects/ToDoListDB
+/notes
+/projects/Authentication
+/projects/BlogDB
+/projects/FruitsMongoDB
+/projects/NewsletterSignup
+/projects/WikiAPI
+*.vsidx
+*.lock
+*.suo
+*.esproj
+*.json
+
+/projects/Keeper/.vs/Keeper/config
+/projects/Keeper/Keeper.sln
+/projects/ReactProps/.vs/ReactProps/config/applicationhost.config
+/projects/ReactProps/ReactProps/.gitignore
+/projects/ReactProps/ReactProps.sln
+/projects/ReactMapping/.vs/ReactMapping/config/applicationhost.config
+/projects/ReactMapping/ReactMapping/.gitignore
+/projects/ReactMapping/ReactMapping.sln
