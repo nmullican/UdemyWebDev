@@ -1,12 +1,21 @@
 import React from "react";
 
-function Form() {
+function ShowConfirmPW(props) {
+    const showPW = props.showConfirmPW;
+    if (showPW) {
+        return < input type="password" placeholder="Confirm Password" />;
+    }
+    return "";
+}
+
+
+function Form(props) {
     return (
         <form className="form">
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
-            <button type="submit">Register</button>
+            <ShowConfirmPW showConfirmPW={props.showConfirmPW} />
+            <button type="submit">{props.buttonType}</button>
         </form>
     );
 }
