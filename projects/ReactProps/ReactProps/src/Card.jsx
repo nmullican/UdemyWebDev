@@ -5,6 +5,7 @@ import './styles.css'
 function Card(props) {
     return <div className="card">
         <div className="top">
+            <p>ID Key is ({props.id})</p>
             <h2 className="name"> {props.name}</h2>
             <Avatar imgURL={props.imgURL} />
         </div>

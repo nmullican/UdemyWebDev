@@ -9,8 +9,9 @@ function App() {
     return (
         <div>
             <h1 className="heading">My Contacts</h1>
-            {contacts.map(({ name, imgURL, phone, email }) => (
-                <Card name={name}
+            {contacts.map(({ id, name, imgURL, phone, email }) => (
+                <Card id={id}
+                    name={name}
                     imgURL={imgURL}
                     phone={phone}
                     email={email} />
